@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Be Strong Gym - Transform Your Body, Transform Your Life</title>
+    
+    <!-- favicon -->
+    <link rel="icon" type="image/png" href="favicon.png">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body class="font-['Montserrat']">
+    
+     
+    <!-- ========================================
+         NAVIGATION BAR
+    ======================================== -->
+    <nav id="navbar" class="fixed w-full top-0 z-50 transition-all duration-300">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <!-- Logo or gym ka name  -->
+            <div class="flex items-center space-x-3">
+            <img src="logo.png" alt="Be Strong Gym Logo" class="h-12 w-auto object-contain">                <span class="text-white text-2xl font-bold tracking-wide">Be Strong Gym</span>
+            </div>
+            
+            <!-- Navigation Links -->
+            <div class="hidden md:flex space-x-8">
+                <a href="#home" class="nav-link text-white font-semibold hover:text-yellow-400 transition-all duration-300">Home</a>
+                <a href="#about" class="nav-link text-white font-semibold hover:text-yellow-400 transition-all duration-300">About</a>
+                <a href="#facilities" class="nav-link text-white font-semibold hover:text-yellow-400 transition-all duration-300">Facilities</a>
+                <a href="#packages" class="nav-link text-white font-semibold hover:text-yellow-400 transition-all duration-300">Packages</a>
+                <a href="#contact" class="nav-link text-white font-semibold hover:text-yellow-400 transition-all duration-300">Contact</a>
+            </div>
+            
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" class="md:hidden text-white text-2xl">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-black bg-opacity-95 absolute w-full">
+            <div class="flex flex-col space-y-4 px-6 py-6">
+                <a href="#home" class="mobile-nav-link text-white font-semibold hover:text-yellow-400 transition-all duration-300">Home</a>
+                <a href="#about" class="mobile-nav-link text-white font-semibold hover:text-yellow-400 transition-all duration-300">About</a>
+                <a href="#facilities" class="mobile-nav-link text-white font-semibold hover:text-yellow-400 transition-all duration-300">Facilities</a>
+                <a href="#packages" class="mobile-nav-link text-white font-semibold hover:text-yellow-400 transition-all duration-300">Packages</a>
+                <a href="#contact" class="mobile-nav-link text-white font-semibold hover:text-yellow-400 transition-all duration-300">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ========================================
+         HERO SECTION WITH VIDEO BACKGROUND
+    ======================================== -->
+    <section id="home" class="relative h-screen flex items-center justify-center overflow-hidden">
+        <!-- Video Background -->
+        <video autoplay muted loop playsinline class="absolute w-full h-full object-cover">
+            <source src="gym-video.mp4" type="video/mp4">
+            <!-- Fallback background image if video doesn't load -->
+        </video>
+        
+        <!-- Dark Overlay for better text visibility -->
+        <div class="absolute inset-0 bg-black bg-opacity-60"></div>
+        
+        <!-- Hero Content -->
+        <div class="relative z-10 text-center px-6 animate-fade-in">
+            <h1 class="text-5xl md:text-7xl font-bold text-white mb-6 tracking-tight">
+                TRANSFORM YOUR <span class="text-yellow-400">BODY</span>
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-200 mb-8 max-w-3xl mx-auto">
+                Join Be Strong Gym and unleash your true potential with state-of-the-art facilities and expert trainers
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <a href="#packages" class="cta-button bg-yellow-400 text-black px-8 py-4 rounded-full font-bold text-lg hover:bg-yellow-500 transform hover:scale-105 transition-all duration-300 shadow-2xl">
+                    View Packages
+                </a>
+                <a href="#contact" class="cta-button-outline border-2 border-white text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-white hover:text-black transform hover:scale-105 transition-all duration-300">
+                    Contact Us
+                </a>
+            </div>
+            
+            <!-- Scroll Down Indicator -->
+            <!-- <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+                <i class="fas fa-chevron-down text-white text-3xl"></i>
+            </div> -->
+        </div>
+    </section>
+
+    <!-- ========================================
+         ABOUT US SECTION
+    ======================================== -->
+    <section id="about" class="py-20 bg-gradient-to-b from-gray-900 to-black">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16 animate-on-scroll">
+                <h2 class="text-4xl md:text-5xl font-bold text-white mb-4">About <span class="text-yellow-400">Us</span></h2>
+                <div class="w-24 h-1 bg-yellow-400 mx-auto"></div>
+            </div>
+            
+            <div class="max-w-4xl mx-auto">
+                <div class="bg-gray-800 bg-opacity-50 backdrop-blur-sm p-8 md:p-12 rounded-2xl shadow-2xl animate-on-scroll">
+                    <p class="text-gray-300 text-lg leading-relaxed mb-6">
+                        Be Strong Gym was born from a simple yet powerful vision: to create a space where everyone, regardless of their fitness level, could come together to achieve their health and wellness goals. What started as a small facility with just a few pieces of equipment has grown into one of Islamabad's premier fitness destinations.
+                    </p>
+                    <p class="text-gray-300 text-lg leading-relaxed mb-6">
+                        Our founder, inspired by personal transformation through fitness, recognized the need for a gym that wasn't just about building muscles, but about building character, discipline, and a supportive community. Today, we're proud to serve hundreds of members who trust us with their fitness journey.
+                    </p>
+                    <p class="text-gray-300 text-lg leading-relaxed">
+                        At Be Strong Gym, we believe that strength comes in many forms – physical, mental, and emotional. Our mission is to empower you with the tools, guidance, and motivation you need to become the strongest version of yourself.
+                    </p>
+                    
+                    <!-- Stats -->
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12">
+                        <div class="text-center">
+                            <div class="text-4xl font-bold text-yellow-400 mb-2">100+</div>
+                            <div class="text-gray-400">Active Members</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-4xl font-bold text-yellow-400 mb-2">10+</div>
+                            <div class="text-gray-400">Expert Trainers</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-4xl font-bold text-yellow-400 mb-2">800+</div>
+                            <div class="text-gray-400">Sq. Ft. Space</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-4xl font-bold text-yellow-400 mb-2">24/7</div>
+                            <div class="text-gray-400">Support</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         GYM TIMINGS SECTION
+    ======================================== -->
+    <section class="py-20 bg-black">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16 animate-on-scroll">
+                <h2 class="text-4xl md:text-5xl font-bold text-white mb-4">Gym <span class="text-yellow-400">Timings</span></h2>
+                <div class="w-24 h-1 bg-yellow-400 mx-auto"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <!-- Boys Timing -->
+                <div class="timing-card bg-gradient-to-br from-blue-900 to-blue-700 p-8 rounded-2xl shadow-2xl transform hover:scale-105 transition-all duration-300 animate-on-scroll">
+                    <div class="text-center">
+                        <i class="fas fa-male text-6xl text-white mb-4"></i>
+                        <h3 class="text-3xl font-bold text-white mb-4">Men's Hours</h3>
+                        <div class="text-5xl font-bold text-yellow-400 mb-2">2 PM - 11 PM</div>
+                        <p class="text-gray-200 text-lg">9 Hours Daily</p>
+                    </div>
+                </div>
+                
+                <!-- Girls Timing -->
+                <div class="timing-card bg-gradient-to-br from-pink-900 to-pink-700 p-8 rounded-2xl shadow-2xl transform hover:scale-105 transition-all duration-300 animate-on-scroll">
+                    <div class="text-center">
+                        <i class="fas fa-female text-6xl text-white mb-4"></i>
+                        <h3 class="text-3xl font-bold text-white mb-4">Women's Hours</h3>
+                        <div class="text-5xl font-bold text-yellow-400 mb-2">8 AM - 1 PM</div>
+                        <p class="text-gray-200 text-lg">5 Hours Daily</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         FACILITIES SECTION
+    ======================================== -->
+    <section id="facilities" class="py-20 bg-gradient-to-b from-gray-900 to-black">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16 animate-on-scroll">
+                <h2 class="text-4xl md:text-5xl font-bold text-white mb-4">Our <span class="text-yellow-400">Facilities</span></h2>
+                <div class="w-24 h-1 bg-yellow-400 mx-auto mb-4"></div>
+                <p class="text-gray-400 text-lg">State-of-the-art equipment and amenities for your fitness journey</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Swimming Pool -->
+                <div class="facility-card bg-gray-800 bg-opacity-50 backdrop-blur-sm p-8 rounded-2xl shadow-xl hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 animate-on-scroll">
+                    <div class="text-center">
+                        <div class="bg-yellow-400 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
+                            <i class="fas fa-swimming-pool text-4xl text-black"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-4">Swimming Pool</h3>
+                        <p class="text-gray-400">Olympic-size swimming pool for cardio and aqua fitness</p>
+                    </div>
+                </div>
+                
+                <!-- Personal Lockers -->
+                <div class="facility-card bg-gray-800 bg-opacity-50 backdrop-blur-sm p-8 rounded-2xl shadow-xl hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 animate-on-scroll">
+                    <div class="text-center">
+                        <div class="bg-yellow-400 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
+                            <i class="fas fa-lock text-4xl text-black"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-4">Personal Lockers</h3>
+                        <p class="text-gray-400">Secure personal lockers for your belongings</p>
+                    </div>
+                </div>
+                
+                <!-- Cardio Equipment -->
+                <div class="facility-card bg-gray-800 bg-opacity-50 backdrop-blur-sm p-8 rounded-2xl shadow-xl hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 animate-on-scroll">
+                    <div class="text-center">
+                        <div class="bg-yellow-400 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
+                            <i class="fas fa-heartbeat text-4xl text-black"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-4">Cardio Zone</h3>
+                        <p class="text-gray-400">Premium cardio machines including treadmills, bikes & more</p>
+                    </div>
+                </div>
+                
+                <!-- Gym Machines -->
+                <div class="facility-card bg-gray-800 bg-opacity-50 backdrop-blur-sm p-8 rounded-2xl shadow-xl hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 animate-on-scroll">
+                    <div class="text-center">
+                        <div class="bg-yellow-400 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
+                            <i class="fas fa-dumbbell text-4xl text-black"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-4">Strength Training</h3>
+                        <p class="text-gray-400">Complete range of machines for every muscle group</p>
+                    </div>
+                </div>
+                
+                <!-- Expert Trainers -->
+                <div class="facility-card bg-gray-800 bg-opacity-50 backdrop-blur-sm p-8 rounded-2xl shadow-xl hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 animate-on-scroll lg:col-span-2">
+                    <div class="text-center">
+                        <div class="bg-yellow-400 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
+                            <i class="fas fa-user-friends text-4xl text-black"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-4">Expert Trainers</h3>
+                        <p class="text-gray-400">Certified professional trainers to guide your fitness journey</p>
+                    </div>
+                </div>
+                
+                <!-- Additional Amenities -->
+                <div class="facility-card bg-gray-800 bg-opacity-50 backdrop-blur-sm p-8 rounded-2xl shadow-xl hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 animate-on-scroll lg:col-span-2">
+                    <div class="text-center">
+                        <div class="bg-yellow-400 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
+                            <i class="fas fa-star text-4xl text-black"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-4">Premium Amenities</h3>
+                        <p class="text-gray-400">Modern changing rooms, showers, and comfortable workout environment</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         PACKAGES SECTION
+    ======================================== -->
+    <section id="packages" class="py-20 bg-black">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16 animate-on-scroll">
+                <h2 class="text-4xl md:text-5xl font-bold text-white mb-4">Membership <span class="text-yellow-400">Packages</span></h2>
+                <div class="w-24 h-1 bg-yellow-400 mx-auto mb-4"></div>
+                <p class="text-gray-400 text-lg">Choose the perfect plan for your fitness goals</p>
+                <p class="text-yellow-400 font-semibold mt-4 text-xl">One-time Admission Fee: Rs. 2,000 (for first-time members)</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+                <!-- Monthly Basic Package -->
+                <div class="package-card bg-gradient-to-b from-gray-800 to-gray-900 p-8 rounded-2xl shadow-2xl transform hover:scale-105 transition-all duration-300 animate-on-scroll border-2 border-gray-700 hover:border-yellow-400">
+                    <div class="text-center mb-6">
+                        <i class="fas fa-calendar-alt text-5xl text-yellow-400 mb-4"></i>
+                        <h3 class="text-3xl font-bold text-white mb-2">Monthly Basic</h3>
+                        <p class="text-gray-400">Perfect for beginners</p>
+                    </div>
+                    <div class="text-center mb-8">
+                        <div class="text-5xl font-bold text-yellow-400 mb-2">Rs. 3,499</div>
+                        <p class="text-gray-400">per month</p>
+                    </div>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-center text-gray-300">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            Full gym access
+                        </li>
+                        <li class="flex items-center text-gray-300">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            Strength training equipment
+                        </li>
+                        <li class="flex items-center text-gray-300">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            Personal locker
+                        </li>
+                        <li class="flex items-center text-gray-300">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            Expert trainers available
+                        </li>
+                        <li class="flex items-center text-red-400">
+                            <i class="fas fa-times mr-3"></i>
+                            No cardio access
+                        </li>
+                    </ul>
+                    <a href="#contact" class="block w-full bg-yellow-400 text-black text-center py-3 rounded-full font-bold hover:bg-yellow-500 transition-all duration-300">
+                        Get Started
+                    </a>
+                </div>
+                
+                <!-- Monthly Premium Package -->
+                <div class="package-card bg-gradient-to-b from-yellow-600 to-yellow-700 p-8 rounded-2xl shadow-2xl transform hover:scale-105 transition-all duration-300 animate-on-scroll border-4 border-yellow-400 relative">
+                    <div class="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-black text-yellow-400 px-6 py-2 rounded-full font-bold">
+                        POPULAR
+                    </div>
+                    <div class="text-center mb-6">
+                        <i class="fas fa-fire text-5xl text-white mb-4"></i>
+                        <h3 class="text-3xl font-bold text-white mb-2">Monthly Premium</h3>
+                        <p class="text-gray-100">Most popular choice</p>
+                    </div>
+                    <div class="text-center mb-8">
+                        <div class="text-5xl font-bold text-white mb-2">Rs. 4,999</div>
+                        <p class="text-gray-100">per month</p>
+                    </div>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-center text-white">
+                            <i class="fas fa-check text-green-300 mr-3"></i>
+                            Full gym access
+                        </li>
+                        <li class="flex items-center text-white">
+                            <i class="fas fa-check text-green-300 mr-3"></i>
+                            Strength training equipment
+                        </li>
+                        <li class="flex items-center text-white">
+                            <i class="fas fa-check text-green-300 mr-3"></i>
+                            Personal locker
+                        </li>
+                        <li class="flex items-center text-white">
+                            <i class="fas fa-check text-green-300 mr-3"></i>
+                            Expert trainers available
+                        </li>
+                        <li class="flex items-center text-white font-semibold">
+                            <i class="fas fa-check text-green-300 mr-3"></i>
+                            Full cardio access
+                        </li>
+                    </ul>
+                    <a href="#contact" class="block w-full bg-black text-yellow-400 text-center py-3 rounded-full font-bold hover:bg-gray-900 transition-all duration-300">
+                        Get Started
+                    </a>
+                </div>
+                
+                <!-- Monthly Elite Package -->
+                <div class="package-card bg-gradient-to-b from-gray-800 to-gray-900 p-8 rounded-2xl shadow-2xl transform hover:scale-105 transition-all duration-300 animate-on-scroll border-2 border-gray-700 hover:border-yellow-400">
+                    <div class="text-center mb-6">
+                        <i class="fas fa-crown text-5xl text-yellow-400 mb-4"></i>
+                        <h3 class="text-3xl font-bold text-white mb-2">Monthly Elite</h3>
+                        <p class="text-gray-400">Ultimate experience</p>
+                    </div>
+                    <div class="text-center mb-8">
+                        <div class="text-5xl font-bold text-yellow-400 mb-2">Rs. 15,000</div>
+                        <p class="text-gray-400">per month</p>
+                    </div>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-center text-gray-300">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            Full gym access
+                        </li>
+                        <li class="flex items-center text-gray-300">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            Strength training equipment
+                        </li>
+                        <li class="flex items-center text-gray-300">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            Personal locker
+                        </li>
+                        <li class="flex items-center text-gray-300">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            Expert trainers available
+                        </li>
+                        <li class="flex items-center text-gray-300 font-semibold">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            Full cardio access
+                        </li>
+                        <li class="flex items-center text-yellow-400 font-bold">
+                            <i class="fas fa-star text-yellow-400 mr-3"></i>
+                            Swimming pool access
+                        </li>
+                    </ul>
+                    <a href="#contact" class="block w-full bg-yellow-400 text-black text-center py-3 rounded-full font-bold hover:bg-yellow-500 transition-all duration-300">
+                        Get Started
+                    </a>
+                </div>
+                
+                <!-- 3 Months Package -->
+                <div class="package-card bg-gradient-to-b from-gray-800 to-gray-900 p-8 rounded-2xl shadow-2xl transform hover:scale-105 transition-all duration-300 animate-on-scroll border-2 border-gray-700 hover:border-yellow-400 lg:col-span-1">
+                    <div class="text-center mb-6">
+                        <i class="fas fa-bolt text-5xl text-yellow-400 mb-4"></i>
+                        <h3 class="text-3xl font-bold text-white mb-2">3 Months Deal</h3>
+                        <p class="text-gray-400">Best value for money</p>
+                    </div>
+                    <div class="text-center mb-8">
+                        <div class="text-5xl font-bold text-yellow-400 mb-2">Rs. 12,000</div>
+                        <p class="text-gray-400">90 days</p>
+                        <p class="text-green-400 text-sm mt-2">Includes admission fee!</p>
+                    </div>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-center text-gray-300">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            Full gym access
+                        </li>
+                        <li class="flex items-center text-gray-300">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            Strength training equipment
+                        </li>
+                        <li class="flex items-center text-gray-300">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            Personal locker
+                        </li>
+                        <li class="flex items-center text-gray-300">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            Full cardio access
+                        </li>
+                        <li class="flex items-center text-yellow-400 font-semibold">
+                            <i class="fas fa-gift text-yellow-400 mr-3"></i>
+                            No admission fee
+                        </li>
+                    </ul>
+                    <a href="#contact" class="block w-full bg-yellow-400 text-black text-center py-3 rounded-full font-bold hover:bg-yellow-500 transition-all duration-300">
+                        Get Started
+                    </a>
+                </div>
+                
+                <!-- Yearly Package -->
+                <div class="package-card bg-gradient-to-b from-purple-900 to-purple-800 p-8 rounded-2xl shadow-2xl transform hover:scale-105 transition-all duration-300 animate-on-scroll border-4 border-purple-500 lg:col-span-2 relative">
+                    <div class="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-black text-purple-400 px-6 py-2 rounded-full font-bold">
+                        BEST DEAL
+                    </div>
+                    <div class="text-center mb-6">
+                        <i class="fas fa-trophy text-5xl text-yellow-400 mb-4"></i>
+                        <h3 class="text-3xl font-bold text-white mb-2">Yearly Champion</h3>
+                        <p class="text-purple-200">Maximum savings & commitment</p>
+                    </div>
+                    <div class="text-center mb-8">
+                        <div class="text-6xl font-bold text-yellow-400 mb-2">Rs. 39,999</div>
+                        <p class="text-purple-200">12 months</p>
+                        <p class="text-green-400 font-semibold mt-2">Includes admission fee! Save Rs. 20,000+</p>
+                    </div>
+                    <div class="grid md:grid-cols-2 gap-4 mb-8">
+                        <ul class="space-y-4">
+                            <li class="flex items-center text-white">
+                                <i class="fas fa-check text-green-400 mr-3"></i>
+                                Full gym access
+                            </li>
+                            <li class="flex items-center text-white">
+                                <i class="fas fa-check text-green-400 mr-3"></i>
+                                Strength training equipment
+                            </li>
+                            <li class="flex items-center text-white">
+                                <i class="fas fa-check text-green-400 mr-3"></i>
+                                Personal locker
+                            </li>
+                        </ul>
+                        <ul class="space-y-4">
+                            <li class="flex items-center text-white font-semibold">
+                                <i class="fas fa-check text-green-400 mr-3"></i>
+                                Full cardio access
+                            </li>
+                            <li class="flex items-center text-yellow-400 font-bold">
+                                <i class="fas fa-gift text-yellow-400 mr-3"></i>
+                                No admission fee
+                            </li>
+                            <li class="flex items-center text-yellow-400 font-bold">
+                                <i class="fas fa-star text-yellow-400 mr-3"></i>
+                                Priority support
+                            </li>
+                        </ul>
+                    </div>
+                    <a href="#contact" class="block w-full bg-yellow-400 text-black text-center py-4 rounded-full font-bold text-lg hover:bg-yellow-500 transition-all duration-300">
+                        Claim Your Spot Now
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         MANAGEMENT SECTION
+    ======================================== -->
+    <section class="py-20 bg-gradient-to-b from-gray-900 to-black">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16 animate-on-scroll">
+                <h2 class="text-4xl md:text-5xl font-bold text-white mb-4">Meet Our <span class="text-yellow-400">Manager</span></h2>
+                <div class="w-24 h-1 bg-yellow-400 mx-auto"></div>
+            </div>
+            
+            <div class="max-w-2xl mx-auto">
+                <div class="bg-gradient-to-br from-gray-800 to-gray-900 p-10 rounded-2xl shadow-2xl text-center animate-on-scroll">
+                    <div class="mb-6">
+                        <div class="w-32 h-32 bg-yellow-400 rounded-full mx-auto flex items-center justify-center mb-4">
+                            <i class="fas fa-user-tie text-6xl text-black"></i>
+                        </div>
+                        <h3 class="text-3xl font-bold text-white mb-2">Muhammad Ahmed Khan</h3>
+                        <p class="text-yellow-400 font-semibold text-xl mb-6">Gym Manager</p>
+                    </div>
+                    
+                    <div class="space-y-4">
+                        <div class="bg-gray-700 bg-opacity-50 p-4 rounded-lg">
+                            <i class="fas fa-phone text-yellow-400 mr-3"></i>
+                            <span class="text-white font-semibold">Phone:</span>
+                            <a href="tel:+923335551234" class="text-gray-300 ml-2 hover:text-yellow-400">+92 333 555 1234</a>
+                        </div>
+                        
+                        <div class="bg-gray-700 bg-opacity-50 p-4 rounded-lg">
+                            <i class="fab fa-whatsapp text-green-400 mr-3"></i>
+                            <span class="text-white font-semibold">WhatsApp:</span>
+                            <a href="https://wa.me/923335551234" class="text-gray-300 ml-2 hover:text-yellow-400">+92 333 555 1234</a>
+                        </div>
+                    </div>
+                    
+                    <p class="text-gray-400 mt-6 italic">
+                        "Your fitness journey is our priority. Feel free to reach out anytime for guidance, support, or inquiries!"
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         CONTACT SECTION
+    ======================================== -->
+    <section id="contact" class="py-20 bg-black">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16 animate-on-scroll">
+                <h2 class="text-4xl md:text-5xl font-bold text-white mb-4">Get In <span class="text-yellow-400">Touch</span></h2>
+                <div class="w-24 h-1 bg-yellow-400 mx-auto mb-4"></div>
+                <p class="text-gray-400 text-lg">Visit us or reach out for any questions</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
+                <!-- Contact Information -->
+                <div class="space-y-8 animate-on-scroll">
+                    <div class="bg-gray-800 bg-opacity-50 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-70 transition-all duration-300">
+                        <div class="flex items-start">
+                            <div class="bg-yellow-400 p-4 rounded-full mr-4">
+                                <i class="fas fa-map-marker-alt text-2xl text-black"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-white mb-2">Visit Us</h3>
+                                <p class="text-gray-300">Street No. 1, Shah Allah Ditta</p>
+                                <p class="text-gray-300">Near D-12, Islamabad</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-gray-800 bg-opacity-50 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-70 transition-all duration-300">
+                        <div class="flex items-start">
+                            <div class="bg-yellow-400 p-4 rounded-full mr-4">
+                                <i class="fas fa-envelope text-2xl text-black"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-white mb-2">Email Us</h3>
+                                <a href="mailto:contact@bestronggym.com" class="text-gray-300 hover:text-yellow-400 transition-colors">
+                                    contact@bestronggym.com
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-gray-800 bg-opacity-50 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-70 transition-all duration-300">
+                        <div class="flex items-start">
+                            <div class="bg-yellow-400 p-4 rounded-full mr-4">
+                                <i class="fas fa-phone text-2xl text-black"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-white mb-2">Call Us</h3>
+                                <p class="text-gray-300">+92 333 555 6789</p>
+                                <p class="text-gray-300">+92 321 555 9876</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Social Media -->
+                    <div class="bg-gray-800 bg-opacity-50 backdrop-blur-sm p-6 rounded-xl">
+                        <h3 class="text-xl font-bold text-white mb-4">Follow Us</h3>
+                        <div class="flex space-x-4">
+                            <a href="#" class="bg-yellow-400 w-12 h-12 rounded-full flex items-center justify-center hover:bg-yellow-500 transform hover:scale-110 transition-all duration-300">
+                                <i class="fab fa-facebook-f text-black text-xl"></i>
+                            </a>
+                            <a href="#" class="bg-yellow-400 w-12 h-12 rounded-full flex items-center justify-center hover:bg-yellow-500 transform hover:scale-110 transition-all duration-300">
+                                <i class="fab fa-instagram text-black text-xl"></i>
+                            </a>
+                            <a href="#" class="bg-yellow-400 w-12 h-12 rounded-full flex items-center justify-center hover:bg-yellow-500 transform hover:scale-110 transition-all duration-300">
+                                <i class="fab fa-whatsapp text-black text-xl"></i>
+                            </a>
+                            <a href="#" class="bg-yellow-400 w-12 h-12 rounded-full flex items-center justify-center hover:bg-yellow-500 transform hover:scale-110 transition-all duration-300">
+                                <i class="fab fa-youtube text-black text-xl"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Contact Form -->
+                <div class="animate-on-scroll">
+                    <form class="bg-gray-800 bg-opacity-50 backdrop-blur-sm p-8 rounded-xl">
+                        <div class="mb-6">
+                            <label class="block text-white font-semibold mb-2">Your Name</label>
+                            <input type="text" class="w-full px-4 py-3 bg-gray-700 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-400 transition-all" placeholder="Enter your name" required>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label class="block text-white font-semibold mb-2">Email Address</label>
+                            <input type="email" class="w-full px-4 py-3 bg-gray-700 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-400 transition-all" placeholder="your.email@example.com" required>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label class="block text-white font-semibold mb-2">Phone Number</label>
+                            <input type="tel" class="w-full px-4 py-3 bg-gray-700 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-400 transition-all" placeholder="+92 XXX XXXXXXX" required>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label class="block text-white font-semibold mb-2">Message</label>
+                            <textarea rows="4" class="w-full px-4 py-3 bg-gray-700 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-400 transition-all" placeholder="Tell us about your fitness goals..." required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="w-full bg-yellow-400 text-black font-bold py-4 rounded-full hover:bg-yellow-500 transform hover:scale-105 transition-all duration-300">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         TERMS & CONDITIONS SECTION
+    ======================================== -->
+    <section class="py-20 bg-gradient-to-b from-gray-900 to-black">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16 animate-on-scroll">
+                <h2 class="text-4xl md:text-5xl font-bold text-white mb-4">Terms & <span class="text-yellow-400">Conditions</span></h2>
+                <div class="w-24 h-1 bg-yellow-400 mx-auto"></div>
+            </div>
+            
+            <div class="max-w-4xl mx-auto bg-gray-800 bg-opacity-50 backdrop-blur-sm p-8 md:p-12 rounded-2xl shadow-2xl animate-on-scroll">
+                <div class="space-y-6 text-gray-300">
+                    <div>
+                        <h3 class="text-2xl font-bold text-yellow-400 mb-3">1. Membership Policy</h3>
+                        <p class="leading-relaxed">All memberships require a one-time admission fee of Rs. 2,000 for first-time members. Membership is non-transferable and strictly for personal use only.</p>
+                    </div>
+                    
+                    <div>
+                        <h3 class="text-2xl font-bold text-yellow-400 mb-3">2. Payment Terms</h3>
+                        <p class="leading-relaxed">Monthly memberships must be paid in advance by the 1st of each month. Package fees are to be paid in full at the time of enrollment. No refunds will be issued for unused membership periods.</p>
+                    </div>
+                    
+                    <div>
+                        <h3 class="text-2xl font-bold text-yellow-400 mb-3">3. Facility Usage</h3>
+                        <p class="leading-relaxed">Members must strictly adhere to designated timing hours for men (2 PM - 11 PM) and women (8 AM - 1 PM). Proper gym attire and clean athletic shoes are mandatory. Members must return all equipment to designated areas after use.</p>
+                    </div>
+                    
+                    <div>
+                        <h3 class="text-2xl font-bold text-yellow-400 mb-3">4. Health & Safety</h3>
+                        <p class="leading-relaxed">Members must disclose any pre-existing medical conditions or injuries before starting their fitness program. Be Strong Gym is not liable for any injuries sustained during workouts. First-time members are encouraged to consult with our trainers.</p>
+                    </div>
+                    
+                    <div>
+                        <h3 class="text-2xl font-bold text-yellow-400 mb-3">5. Code of Conduct</h3>
+                        <p class="leading-relaxed">Respectful behavior towards staff and fellow members is mandatory. Use of mobile phones is restricted to designated areas. Photography or videography inside the gym premises is strictly prohibited without prior written permission.</p>
+                    </div>
+                    
+                    <div>
+                        <h3 class="text-2xl font-bold text-yellow-400 mb-3">6. Personal Belongings</h3>
+                        <p class="leading-relaxed">While personal lockers are provided, the gym is not responsible for lost, stolen, or damaged personal items. Members are advised to use locks on their assigned lockers.</p>
+                    </div>
+                    
+                    <div>
+                        <h3 class="text-2xl font-bold text-yellow-400 mb-3">7. Suspension & Termination</h3>
+                        <p class="leading-relaxed">The management reserves the right to suspend or terminate membership for violation of gym rules, misconduct, or non-payment of fees without refund.</p>
+                    </div>
+                    
+                    <div>
+                        <h3 class="text-2xl font-bold text-yellow-400 mb-3">8. Modifications</h3>
+                        <p class="leading-relaxed">Be Strong Gym reserves the right to modify these terms and conditions, membership fees, or facility timings with prior notice to members.</p>
+                    </div>
+                </div>
+                
+                <div class="mt-10 p-6 bg-yellow-400 bg-opacity-10 border-l-4 border-yellow-400 rounded">
+                    <p class="text-white font-semibold">
+                        By enrolling as a member of Be Strong Gym, you acknowledge that you have read, understood, and agree to abide by all terms and conditions.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         FOOTER
+    ======================================== -->
+    <footer class="bg-black border-t border-gray-800 py-10">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-3 gap-8 mb-8">
+                <!-- About -->
+                <div>
+                    <h3 class="text-2xl font-bold text-white mb-4">Be Strong Gym</h3>
+                    <p class="text-gray-400 mb-4">Transform your body, transform your life. Join us on your fitness journey today!</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-yellow-400 transition-colors">
+                            <i class="fab fa-facebook-f text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-yellow-400 transition-colors">
+                            <i class="fab fa-instagram text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-yellow-400 transition-colors">
+                            <i class="fab fa-whatsapp text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-xl font-bold text-white mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-gray-400 hover:text-yellow-400 transition-colors">Home</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-yellow-400 transition-colors">About Us</a></li>
+                        <li><a href="#facilities" class="text-gray-400 hover:text-yellow-400 transition-colors">Facilities</a></li>
+                        <li><a href="#packages" class="text-gray-400 hover:text-yellow-400 transition-colors">Packages</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-yellow-400 transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Contact Info -->
+                <div>
+                    <h3 class="text-xl font-bold text-white mb-4">Contact Info</h3>
+                    <ul class="space-y-3 text-gray-400">
+                        <li><i class="fas fa-map-marker-alt text-yellow-400 mr-2"></i>Street No. 1, Shah Allah Ditta, Near D-12, Islamabad</li>
+                        <li><i class="fas fa-envelope text-yellow-400 mr-2"></i>contact@bestronggym.com</li>
+                        <li><i class="fas fa-phone text-yellow-400 mr-2"></i>+92 333 555 6789</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-8 text-center">
+                <p class="text-gray-400">© 2024 Be Strong Gym. All rights reserved. Designed with <span class="text-red-500">❤</span> for fitness enthusiasts.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom JavaScript -->
+    <script src="script.js"></script>
+    
+</body>
+</html>
