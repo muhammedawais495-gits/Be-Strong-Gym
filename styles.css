@@ -1,0 +1,460 @@
+/* ========================================
+   CUSTOM CSS FOR BE STRONG GYM
+   This file contains custom styles that complement Tailwind CSS
+======================================== */
+
+/* ========================================
+   GLOBAL STYLES & RESETS
+======================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden;
+    background-color: #000;
+}
+
+/* ========================================
+   NAVIGATION STYLES
+======================================== */
+#navbar {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.7));
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+}
+
+#navbar.scrolled {
+    background: rgba(0, 0, 0, 0.95);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Navigation Link Hover Effects */
+.nav-link {
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 50%;
+    background-color: #facc15; /* yellow-400 */
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* Mobile Navigation Links */
+.mobile-nav-link {
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+.mobile-nav-link:hover {
+    padding-left: 10px;
+    border-left: 3px solid #facc15;
+}
+
+/* ========================================
+   HERO SECTION ANIMATIONS
+======================================== */
+/* Fade in animation for hero content */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fade-in {
+    animation: fadeIn 1s ease-out;
+}
+
+/* Bounce animation for scroll indicator */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(10px);
+    }
+}
+
+.animate-bounce {
+    animation: bounce 2s infinite;
+}
+
+/* ========================================
+   BUTTON STYLES & HOVER EFFECTS
+======================================== */
+/* Call-to-Action Buttons */
+.cta-button {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.cta-button::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.1);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+.cta-button:hover::before {
+    width: 300px;
+    height: 300px;
+}
+
+.cta-button-outline {
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.cta-button-outline:hover {
+    box-shadow: 0 0 20px rgba(250, 204, 21, 0.5);
+}
+
+/* ========================================
+   CARD HOVER EFFECTS
+======================================== */
+/* Timing Cards */
+.timing-card {
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+.timing-card:hover {
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+    transform: translateY(-10px) scale(1.05);
+}
+
+/* Facility Cards */
+.facility-card {
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.facility-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(250, 204, 21, 0.1), transparent);
+    transition: left 0.5s ease;
+}
+
+.facility-card:hover::before {
+    left: 100%;
+}
+
+.facility-card:hover {
+    border: 1px solid rgba(250, 204, 21, 0.3);
+}
+
+/* Package Cards */
+.package-card {
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.package-card:hover {
+    box-shadow: 0 30px 60px rgba(250, 204, 21, 0.2);
+}
+
+/* ========================================
+   SCROLL ANIMATIONS
+======================================== */
+/* Elements that animate when scrolled into view */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.animate-on-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ========================================
+   FORM STYLES
+======================================== */
+/* Input Focus Effects */
+input:focus,
+textarea:focus {
+    transform: scale(1.02);
+}
+
+/* Form Submit Button Pulse */
+button[type="submit"] {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        box-shadow: 0 0 0 0 rgba(250, 204, 21, 0.7);
+    }
+    50% {
+        box-shadow: 0 0 0 15px rgba(250, 204, 21, 0);
+    }
+}
+
+button[type="submit"]:hover {
+    animation: none;
+}
+
+/* ========================================
+   VIDEO BACKGROUND OPTIMIZATION
+======================================== */
+video {
+    filter: brightness(0.7);
+}
+
+/* ========================================
+   SCROLLBAR STYLING
+======================================== */
+/* Custom Scrollbar for Webkit Browsers */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #000;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(to bottom, #facc15, #eab308);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(to bottom, #eab308, #facc15);
+}
+
+/* ========================================
+   LOADING ANIMATION
+======================================== */
+/* Page Load Animation */
+@keyframes pageLoad {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+body {
+    animation: pageLoad 0.5s ease-in;
+}
+
+/* ========================================
+   ICON HOVER EFFECTS
+======================================== */
+/* Social Media Icons */
+.fa-facebook-f:hover,
+.fa-instagram:hover,
+.fa-whatsapp:hover,
+.fa-youtube:hover {
+    transform: rotate(360deg) scale(1.2);
+    transition: all 0.5s ease;
+}
+
+/* Facility Icons */
+.fa-swimming-pool:hover,
+.fa-lock:hover,
+.fa-heartbeat:hover,
+.fa-dumbbell:hover,
+.fa-user-friends:hover,
+.fa-star:hover {
+    animation: shake 0.5s ease;
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    75% { transform: translateX(5px); }
+}
+
+/* ========================================
+   GRADIENT TEXT EFFECTS
+======================================== */
+/* Animated Gradient Text */
+.gradient-text {
+    background: linear-gradient(90deg, #facc15, #fff, #facc15);
+    background-size: 200% auto;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradientShift 3s ease infinite;
+}
+
+@keyframes gradientShift {
+    0% { background-position: 0% center; }
+    50% { background-position: 100% center; }
+    100% { background-position: 0% center; }
+}
+
+/* ========================================
+   RESPONSIVE DESIGN ENHANCEMENTS
+======================================== */
+/* Mobile-specific styles */
+@media (max-width: 768px) {
+    .timing-card {
+        margin-bottom: 20px;
+    }
+    
+    .package-card {
+        margin-bottom: 30px;
+    }
+    
+    /* Reduce animation intensity on mobile */
+    .animate-on-scroll {
+        transform: translateY(20px);
+    }
+}
+
+/* Tablet-specific styles */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .container {
+        padding: 0 30px;
+    }
+}
+
+/* ========================================
+   ACCESSIBILITY ENHANCEMENTS
+======================================== */
+/* Focus Indicators */
+a:focus,
+button:focus,
+input:focus,
+textarea:focus {
+    outline: 2px solid #facc15;
+    outline-offset: 2px;
+}
+
+/* Reduced Motion for Accessibility */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* ========================================
+   BACKGROUND PATTERNS
+======================================== */
+/* Subtle grid pattern for sections */
+.grid-pattern {
+    background-image: 
+        linear-gradient(rgba(250, 204, 21, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(250, 204, 21, 0.03) 1px, transparent 1px);
+    background-size: 50px 50px;
+}
+
+/* ========================================
+   SECTION DIVIDERS
+======================================== */
+/* Decorative dividers between sections */
+.section-divider {
+    height: 2px;
+    background: linear-gradient(to right, transparent, #facc15, transparent);
+    margin: 40px 0;
+}
+
+/* ========================================
+   FLOATING ANIMATION
+======================================== */
+/* Subtle floating effect for cards */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.float-animation {
+    animation: float 3s ease-in-out infinite;
+}
+
+/* ========================================
+   GLOW EFFECTS
+======================================== */
+/* Glow effect for highlighted elements */
+.glow {
+    box-shadow: 0 0 20px rgba(250, 204, 21, 0.5);
+    transition: box-shadow 0.3s ease;
+}
+
+.glow:hover {
+    box-shadow: 0 0 40px rgba(250, 204, 21, 0.8);
+}
+
+/* ========================================
+   PRINT STYLES
+======================================== */
+@media print {
+    nav,
+    footer,
+    video,
+    .cta-button,
+    .cta-button-outline {
+        display: none;
+    }
+    
+    body {
+        background: white;
+        color: black;
+    }
+}
+
+/* ========================================
+   CUSTOM UTILITIES
+======================================== */
+/* Text shadow for better visibility on video */
+.text-shadow {
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
+}
+
+/* Backdrop blur for glass morphism effect */
+.backdrop-blur-custom {
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+}
+
+/* ========================================
+   END OF CUSTOM STYLES
+======================================== */
